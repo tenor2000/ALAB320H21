@@ -1,0 +1,19 @@
+import "./App.css";
+import BlogPost from "./components/BlogPost.tsx";
+import Header from "./components/Header.tsx";
+import Nav from "./components/Nav.tsx";
+import blogs from "./assets/blogData.tsx";
+
+function App() {
+  return (
+    <main>
+      <Header />
+      <Nav />
+      {blogs.map((blog) => {
+        return <BlogPost {...blog} />;
+      })}
+    </main>
+  );
+}
+
+export default App;
