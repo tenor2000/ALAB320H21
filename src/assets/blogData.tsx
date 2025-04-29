@@ -9,7 +9,7 @@ export default [
     link: "#",
   },
   {
-    title: "On the Street in Brooklyn",
+    title: "Vintage in Vogue",
     imgAddress: "/blog-image-2.jpg",
     imgAlt: "A random image",
     content:

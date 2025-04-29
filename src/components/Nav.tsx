@@ -1,9 +1,5 @@
 import styled from "styled-components";
-
-type navItem = {
-  title: string;
-  link: string;
-};
+import navItems from "../assets/navData.tsx";
 
 const List = styled.ul`
   list-style-type: none;
@@ -15,15 +11,6 @@ const List = styled.ul`
 `;
 
 export default function Nav() {
-  const navItems: navItem[] = [
-    { title: "Women's", link: "#" },
-    { title: "Men's", link: "#" },
-    { title: "On the Street", link: "#" },
-    { title: "The Catwalk", link: "#" },
-    { title: "AdWatch", link: "#" },
-    { title: "About", link: "#" },
-  ];
-
   return (
     <nav aria-label="Main Navigation" role="navigation">
       <List>

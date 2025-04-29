@@ -3,7 +3,7 @@ import styled from "styled-components";
 const BlogBlock = styled.div`
   padding: 5px;
   flex: 1;
-  border: 1px solid red;
+  // border: 1px solid red;
   & > div {
     padding: 10px;
     // border: 1px solid white;
