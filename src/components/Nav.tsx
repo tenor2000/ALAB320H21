@@ -8,6 +8,11 @@ const List = styled.ul`
   text-style: underline;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+`;
+
+const Anchor = styled.a`
+  color: lightgray;
 `;
 
 export default function Nav() {
@@ -17,11 +22,10 @@ export default function Nav() {
         {navItems.map(({ title, link }) => {
           return (
             <li>
-              <a href={link}>{title}</a>
+              <Anchor href={link}>{title}</Anchor>
             </li>
           );
         })}
-        <li></li>
       </List>
     </nav>
   );

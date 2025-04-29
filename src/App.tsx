@@ -1,5 +1,5 @@
 import "./App.css";
-import BlogPost from "./components/BlogPost.tsx";
+import Article from "./components/Article.tsx";
 import Header from "./components/Header.tsx";
 import Nav from "./components/Nav.tsx";
 import blogs from "./assets/blogData.tsx";
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Nav />
       {blogs.map((blog) => {
-        return <BlogPost {...blog} />;
+        return <Article {...blog} />;
       })}
       <Footer />
     </main>

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-const BlogBlock = styled.div`
-  padding: 5px;
+const Article = styled.article`
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
   flex: 1;
-  // border: 1px solid red;
+  border-bottom: 1px solid lightgray;
   & > div {
     padding: 10px;
     // border: 1px solid white;
@@ -11,16 +12,17 @@ const BlogBlock = styled.div`
 
   &::after {
     content: "";
-    height: 1px;
-    background-color: white;
+    height: 2px;
+    background-color: green;
   }
 `;
 
-const Article = styled.p`
+const Content = styled.p`
   padding-top: 1rem;
 
   &::first-letter {
     float: left;
+    color: lightgray;
     font-size: 5rem;
     line-height: 1;
     margin-right: 0.5rem;
@@ -30,6 +32,11 @@ const Article = styled.p`
 const Box = styled.div`
   display: flex;
   justify-content: flex-end;
+`;
+
+const Anchor = styled.a`
+  color: tomato;
+  text-decoration: none;
 `;
 
 type BlogObject = {
@@ -50,16 +57,16 @@ export default function BlogPost({
   link,
 }: BlogObject) {
   return (
-    <BlogBlock>
+    <Article>
       <div>
         <p>{date}</p>
         <h2>{title}</h2>
         <img src={imgAddress} alt={imgAlt} />
-        <Article>{content}</Article>
+        <Content>{content}</Content>
       </div>
       <Box>
-        <a href={link}>Continues...</a>
+        <Anchor href={link}>Continues...</Anchor>
       </Box>
-    </BlogBlock>
+    </Article>
   );
 }
